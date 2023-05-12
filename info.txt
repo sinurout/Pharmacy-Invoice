@@ -1,1 +1,1 @@
-link -https://sinurout.github.io/Pharmacy-Invoice/
+link -https://sinurout.github.io/pharmacy-Invoice/

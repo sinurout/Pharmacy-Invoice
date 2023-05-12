@@ -9,13 +9,6 @@ const invoiceNo = document.querySelector('.invoiceNo')
 const phoneNo = document.querySelector('.phoneNo');
 const subTotal = document.querySelector('.subTotal')
 
-console.log(buyer)
-console.log(date)
-console.log(invoiceNo)
-console.log(phoneNo)
-console.log(subTotal)
-
-
 
 let srNo = 0;
 
@@ -60,12 +53,6 @@ function exportCSV(){
         csvData.push(row)
     }
 
-
-
-
-
-
-    
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.aoa_to_sheet(csvData);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'PharmacyInvoice');
@@ -88,7 +75,7 @@ function handleButtonClick(){
         <td><input/></td>
         <td><input/></td>
         <td><input/></td>
-    </tr>
-    `
-    tableRows.innerHTML+= html;
+    </tr>`
+
+    tableRows.insertAdjacentHTML("beforeend", html);
 }
